@@ -10,7 +10,7 @@ css_file = current_dir / "styles" / "main.css"
 profile_pic = current_dir / "assets" / "profile-pic.png"
 
 # --- GENERAL SETTINGS ---
-PAGE_TITLE = "Digital CV | Kunal Jha"
+PAGE_TITLE = "DevOps Professional | Kunal Jha"
 PAGE_ICON = ":wave:"
 NAME = "_Kunal Jha_"
 DESCRIPTION = f"Senior DevOps Engineer, specializing in automation and optimizing CI/CD processes " \
@@ -116,11 +116,11 @@ st.write(
 st.write('\n---')
 st.header(":point_right: Ericsson | `DEC/2011 - JUN/2018`")
 role_details_job2 = """
-| Role                            | Duration             |
-|---------------------------------|----------------------|
-| `Senior Integration Engineer` | `SEP/2017 - JUN/2018` |
-| **`Senior Engineer`**             | `APR/2015 - SEP/2017` |
-| **`Services Engineer`**           | `DEC/2011 - APR/2015`  |
+|              Role              |        Duration        |
+|:------------------------------:|:----------------------:|
+| `Senior Integration Engineer`  | `SEP/2017 - JUN/2018`  |
+|       `Senior Engineer`        | `APR/2015 - SEP/2017`  |
+|      `Services Engineer`       | `DEC/2011 - APR/2015`  |
 """
 st.markdown(role_details_job2)
 st.write(
