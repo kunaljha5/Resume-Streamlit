@@ -3,6 +3,8 @@ from pathlib import Path
 import streamlit as st
 from PIL import Image
 
+import resources.config as cfg
+
 # --- PATH SETTINGS ---
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 css_file = current_dir / "styles" / "main.css"
@@ -10,30 +12,11 @@ css_file = current_dir / "styles" / "main.css"
 profile_pic = current_dir / "assets" / "profile-pic.png"
 
 # --- GENERAL SETTINGS ---
-PAGE_TITLE = "DevOps Professional | Kunal Jha"
-PAGE_ICON = ":wave:"
-NAME = "_Kunal Jha_"
-DESCRIPTION = f"Senior DevOps Engineer, specializing in automation and optimizing CI/CD processes " \
-              f"for seamless and efficient software delivery in enterprise environments."
-EMAIL = "kunaljha5@gmail.com"
-SOCIAL_MEDIA = {
-    "LinkedIn": "https://linkedin.com/in/kunaljha5",
-    "GitHub": "https://github.com/kunaljha5"
-}
-
-PROJECTS = {
-    "🏆 AWS Dev Environment - Full infrastructure setup on AWS Cloud for Clearance and Settlement platform": "cloud/"
-                                                                                                            "internal",
-    "🏆 Jenkins Migration - Migrated Pipelines from Bamboo to Jenkins": "CICD/internal",
-    "🏆 Slack Commands - Slack Commands to to giving easy access to applications and environment": "automation/internal",
-    "🏆 Release Automation - Create Release Automation Framework in python to automate the Release work.": "automation"
-                                                                                                          "/internal"
-}
 
 
-st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
+st.set_page_config(page_title=cfg.PAGE_TITLE, page_icon=cfg.PAGE_ICON)
 
-# --- LOAD CSS, PDF & PROFIL PIC ---
+# --- LOAD CSS, PDF & PROFILE PIC ---
 with open(css_file) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 # with open(resume_file, "rb") as pdf_file:
@@ -46,85 +29,69 @@ with col1:
     st.image(profile_pic, width=230)
 
 with col2:
-    st.title(NAME)
-    st.write(DESCRIPTION)
-    st.write("📫", EMAIL)
+    st.title(cfg.NAME)
+    st.write(cfg.DESCRIPTION)
+    st.write("📫", cfg.EMAIL)
 
 
 # --- SOCIAL LINKS ---
 st.write('\n')
-cols = st.columns(len(SOCIAL_MEDIA))
-for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
+cols = st.columns(len(cfg.SOCIAL_MEDIA))
+for index, (platform, link) in enumerate(cfg.SOCIAL_MEDIA.items()):
     cols[index].write(f"[{platform}]({link})")
 
-# --- EXPERIENCE & QUALIFICATIONS ---
-st.write('\n')
-st.subheader("_Experience & Qualifications_")
-st.write(
-    """
-- ✔️ 11+ Years of Experience in optimizing critical deployments across large infrastructure
-- ✔️ Strong hands on experience in Linux, AWS, Terraform, Python & Jenkins
-- ✔️ Good understanding of CI/CD , Change and Release processes
-- ✔️ Excellent team-player and displaying strong sense of initiative on tasks
-"""
-)
+
+def work_history(index):
+    st.write("---")
+    st.header(f":point_right: | `{cfg.JOBS[index]['COMPANY']}` | `{cfg.JOBS[index]['DURATION']}`")
+    st.write("---")
+    st.subheader("_Roles_")
+    st.write("---")
+    st.markdown(cfg.JOBS[index]['ROLES'])
+    st.write("\n")
+    st.subheader("_Responsibilities_")
+    st.write("---")
+    st.write(cfg.JOBS[index]['RESP'])
 
 
-# --- SKILLS ---
-st.write('\n')
-st.subheader("Hard Skills")
-st.write(
-    """
-- 👩‍💻 Programming: Python, Groovy, Bash Scripting
-- 📊 CI CD Tools: Jenkins, Bamboo, Artifactory, Bitbucket, Jira, Confluence, 
-- 🗄️ Databases: Oracle, MySQL
-"""
-)
+# Sidebar section
+st.sidebar.title('Jump to Sections')
+st_section = st.sidebar.radio(" ", cfg.SECTIONS)
+
+if st_section == "Experience Qualifications":
+    # --- EXPERIENCE & QUALIFICATIONS ---
+    st.write('\n')
+    st.subheader("_Experience & Qualifications_")
+    st.write(
+      cfg.SUMMARY
+    )
+    st.write("---\n")
+    st.subheader("_Education_")
+    st.markdown(cfg.EDUCATION)
 
 
-# --- WORK HISTORY ---
-st.write('\n')
-st.subheader("Work History")
-st.write("---")
+elif st_section == "Skills":
+    # --- SKILLS ---
+    st.write('\n')
+    st.subheader("_Skills & Certifications_")
+    st.write(cfg.SKILLS)
 
-# --- JOB 1
-st.header(":point_right: Global Payments | `JUN/2018 - Present`")
-role_details_job1 = """\n
-|             Role              |       Duration        |
-|:-----------------------------:|:---------------------:|
-| `Associate DevOps Consultant` | `JUL/2022 - Present`  |
-|    `Lead DevOps Engineer`     | `JAN/2021 - JUL/2022` |
-|       `DevOps Engineer`       | `OCT/2019 - JAN/2021` |
-|        `SDET Engineer`        | `JUN/2018 - OCT/2019` |
-"""
-st.markdown(role_details_job1)
-st.write("\n")
-st.write(
-    """\n
-- ► AWS Dev Account Setup & Integration with On Prem
-- ► Terraform Module Development
-- ► Release Automation
-- ► Slack Command Automation
-- ► Bamboo to Jenkins Migration
-- ► AWS PinPoint Integration
-- ► AWS API Gateway Development for CMT
-- ► CI/CD Tools Upgrade & Maintenance
-"""
-)
+elif st_section in ["Current Employer", "Past Employer"]:
+    # --- WORK HISTORY ---
+    st.write('\n')
+    st.subheader("_Work History_")
+    if st_section == "Current Employer":
+        index = -1
+        work_history( index=index)
+    else:
+        for each in range(len(cfg.JOBS)-1):
+            work_history(each)
 
-# --- JOB 2
-st.write('\n---')
-st.header(":point_right: Ericsson | `DEC/2011 - JUN/2018`")
-role_details_job2 = """
-|              Role              |        Duration        |
-|:------------------------------:|:----------------------:|
-| `Senior Integration Engineer`  | `SEP/2017 - JUN/2018`  |
-|       `Senior Engineer`        | `APR/2015 - SEP/2017`  |
-|      `Services Engineer`       | `DEC/2011 - APR/2015`  |
-"""
-st.markdown(role_details_job2)
-st.write(
-    """
-- ► 
-"""
-)
+elif st_section == "Accomplishments":
+    # --- Projects & Accomplishments ---
+    st.write('\n')
+    st.subheader("_Accomplishments_")
+    st.write("---")
+    for project, link in cfg.PROJECTS.items():
+        st.write(f"[{project}]({link})")
+

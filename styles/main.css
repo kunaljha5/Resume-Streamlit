@@ -22,6 +22,11 @@ hr {
     margin-bottom: 5%;
 }
 
+table {
+    width: 100%;
+}
+
+
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
 header {visibility: hidden;}
