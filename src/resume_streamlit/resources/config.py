@@ -3,17 +3,16 @@ PAGE_TITLE = "DevSecOps Expert | Kunal Jha"
 PAGE_ICON = "🚀"
 NAME = "Kunal Jha"
 # Split description for better layout
-HEADER_TITLE = "DevSecOps Expert | Cloud Architecture Strategist | Site Reliability Engineering Expert"
+HEADER_TITLE = "DevSecOps Consultant - AWS Cloud Consultant - SRE Expert"
 
-HEADER_CONTACT = """📍Riyadh, KSA"""
+HEADER_CONTACT = """📍Noida, India"""
 
-HEADER_SUMMARY = """Visionary DevOps Expert with 13+ years architecting enterprise-scale cloud transformations for 50M+ users across government, fintech, and telecom sectors. AWS Certified Solutions Architect Professional who has driven $2M+ revenue recoveries and delivered 60% deployment efficiency gains through strategic DevSecOps implementations."""
 
 EMAIL = "kunaljha5@gmail.com"
 SOCIAL_MEDIA = {
     "LinkedIn": "https://linkedin.com/in/kunaljha5",
     "GitHub": "https://github.com/kunaljha5",
-    "Mobile": "+91-9654633530"
+    "Mobile": "+91-9654633530",
 }
 
 # Enhanced projects with impact metrics
@@ -25,7 +24,7 @@ PROJECTS = {
     "🎯 Disaster Recovery Architecture - <30-minute RTO with automated failover capabilities": "infrastructure/disaster-recovery",
     "📊 Observability Platform - Comprehensive monitoring with Prometheus, Grafana, and custom Elasticsearch dashboards": "monitoring/observability",
     "🔧 Internal Developer Portal - FastAPI/PostgreSQL platform boosting developer productivity by 40%": "automation/developer-portal",
-    "☁️ AWS Cloud Migration - Enterprise fintech infrastructure supporting millions of daily transactions": "cloud/fintech-migration"
+    "☁️ AWS Cloud Migration - Enterprise fintech infrastructure supporting millions of daily transactions": "cloud/fintech-migration",
 }
 
 # Updated role progression with strategic titles
@@ -52,7 +51,7 @@ JOB1_ROLES = """
 |  Platform Innovation Lead & DevOps Architect|    JUN/2020 - NOV/2023  |
 |     Senior DevOps Engineer & Automation Lead|    JUN/2018 - JUN/2020  |
 """
-
+# noqa: E501
 JOB1_RESP = """
     - 🏅 **Founded and scaled** India DevOps Center of Excellence from 1 to 6 engineers, establishing industry-leading practices for high-frequency trading infrastructure
     - 🥇 **Circle of Excellence Award Winner** & **Innovation Challenge Hackathon Champion** (2020, 2021) for breakthrough automation solutions
@@ -92,32 +91,112 @@ EDUCATION = """
 """
 
 # Enhanced skills with strategic categorization
-SKILLS = """
-### Cloud & Infrastructure Excellence
-**AWS Ecosystem Mastery:** EC2, S3, EKS, Lambda, CloudWatch, MSK, IAM, Route53, API Gateway, Connect
-**Infrastructure as Code:** Terraform, Ansible, CloudFormation, GitOps Workflows
-**Container Orchestration:** Docker, Kubernetes, EKS, Service Mesh Architecture
-
-### DevSecOps & Security
-**Security Automation:** HashiCorp Vault, AWS Secrets Manager, SonarQube, Trivy Scanner
-**DevSecOps Practices:** Zero-Trust Architecture, Compliance Automation, Vulnerability Management
-**Identity & Access:** RBAC, Federated Authentication, SSO Integration
-
-### Observability & Site Reliability Engineering
-**Monitoring Platforms:** Prometheus, Grafana, AlertManager, PagerDuty, Elastic Stack (ELK)
-**APM & Tracing:** Distributed tracing, Performance optimization, Capacity planning
-**Incident Management:** SLA/SLO definition, MTTR optimization, Blameless post-mortems
-
-### CI/CD & Release Engineering
-**Pipeline Orchestration:** Jenkins, GitLab CI/CD, GitHub Actions, Bamboo
-**Release Management:** Blue-green deployments, Canary releases, Feature flagging
-**Quality Engineering:** Automated testing, Code quality gates, Security scanning
-
-### Programming & Automation
-**Languages:** Python, Shell/Bash, Groovy, Perl, SQL
-**Databases:** MySQL, PostgreSQL, Redis, Elasticsearch, MinIO
-**API Management:** RESTful services, GraphQL, Microservices communication
-    """
+SKILLS = {
+    "Cloud & Infrastructure Excellence": {
+        "AWS Ecosystem": [
+            "**EC2**",
+            "**S3**",
+            "EKS",
+            "**Lambda**",
+            "CloudWatch",
+            "MSK",
+            "**IAM**",
+            "Route53",
+            "**API Gateway**",
+            "**VPC Networking**",
+            "Connect",
+            "**Route53**",
+            "AWS Security Hub",
+            "**CloudFront**",
+        ],
+        "Infrastructure as Code": ["**Terraform**", "**Ansible**", "CloudFormation"],
+        "Container Orchestration": [
+            "Docker",
+            "Kubernetes",
+            "EKS",
+            "Service Mesh Architecture",
+        ],
+    },
+    "DevSecOps & Security": {
+        "Security Automation": [
+            "**HashiCorp Vault**",
+            "AWS Secrets Manager",
+            "**SonarQube**",
+            "**Trivy Scanner**",
+            "**TFSec**",
+            "**Checkov**",
+        ],
+        "DevSecOps Practices": [
+            "Zero-Trust Architecture",
+            "Compliance Automation",
+            "Vulnerability Management",
+            "IP Whitelisting",
+        ],
+        "Identity & Access": [
+            "RBAC",
+            "Federated Authentication",
+            "SSO Integration",
+            "Cloud Security Posture Management (CSPM)",
+        ],
+    },
+    "Observability & Site Reliability Engineering": {
+        "Monitoring Platforms": [
+            "**Prometheus**",
+            "**Grafana**",
+            "AlertManager",
+            "PagerDuty",
+            "**Elastic Stack (ELK/EFK)**",
+        ],
+        "APM & Tracing": [
+            "Distributed tracing",
+            "Performance optimization",
+            "Capacity planning",
+            "**OpenTelemetry (OTel)**",
+        ],
+        "Incident Management": [
+            "SLA/SLO definition",
+            "MTTR optimization",
+            "Blameless post-mortems",
+        ],
+    },
+    "CI/CD & Release Engineering": {
+        "Pipeline Orchestration": [
+            "**Jenkins**",
+            "**GitLab CI/CD**",
+            "**GitHub Actions**",
+            "Bamboo",
+        ],
+        "Release Management": [
+            "Blue-green deployments",
+            "Canary releases",
+            "Feature flagging",
+            "**Rolling updates**",
+        ],
+        "Quality Engineering": [
+            "Automated testing",
+            "Code Quality gates",
+            "Security scanning",
+        ],
+    },
+    "Programming & Automation": {
+        "Languages": ["**Python**", "**Shell/Bash**", "Groovy", "Perl", "SQL"],
+        "Databases": [
+            "**MySQL**",
+            "**PostgreSQL**",
+            "**Redis**",
+            "**Elasticsearch**",
+            "Oracle",
+        ],
+        "API Management": [
+            "RESTful services",
+            "**APISIX**",
+            "JWT / Token-based authentication",
+            "Rate limiting / Throttling",
+            "OAuth2",
+            "**API Gateway (AWS)**",
+        ],
+    },
+}
 
 SECTIONS = [
     "Executive Summary",
@@ -125,17 +204,24 @@ SECTIONS = [
     "Current & Past Roles",
     "Key Achievements & Recognition",
     "Professional Development",
-    "Education & Background"
+    "Education & Background",
 ]
 
-# Executive Summary
 EXECUTIVE_SUMMARY = """
-**Visionary DevOps Expert** with 13+ years architecting enterprise-scale cloud transformations for 50M+ users across government, fintech, and telecom sectors. **AWS Certified Solutions Architect Professional** who has driven $2M+ revenue recoveries and delivered 60% deployment efficiency gains through strategic DevSecOps implementations.
-
-**Core Impact Areas:** Infrastructure Automation • Cloud Migration Strategy • DevSecOps Culture Transformation • Site Reliability Engineering • High-Performance Team Building • Cost Optimization Excellence
-
-**Philosophy:** Building resilient, self-healing systems while fostering innovation-driven engineering cultures that deliver measurable business outcomes.
+**DevSecOps Expert** with 13+ years designing cloud-native solutions for 50M+ users in govt, fintech, and telecom.
+ Recognized for delivering results and  achieving 60% faster and cheaper deployments through DevSecOps and
+ automation excellence.\n
+**Specialties:**
+ - **AWS Certified Solutions Architect**
+ - **Infrastructure Automation**
+ - Cloud Migration
+ - **DevSecOps Implementation**
+ - **Site Reliability**
+ -  Team Leadership
+ - **Cost Optimization**
+ - **CI/CD Pipelines Optimization**
 """
+
 
 # Enhanced summary with Expert positioning
 SUMMARY = """
@@ -157,7 +243,7 @@ JOBS = [
         "IMPACT": "Mission-Critical Government Platform | 9M+ Active Citizens",
         "ROLES": JOB0_ROLES,
         "RESP": JOB0_RESP,
-        "LOGO": "assets/bvs.png"
+        "LOGO": "assets/bvs.png",
     },
     {
         "COMPANY": "Global Payments Inc (Fortune 500 Fintech)",
@@ -167,7 +253,7 @@ JOBS = [
         "IMPACT": "High-Frequency Trading Infrastructure | Millions of Daily Transactions",
         "ROLES": JOB1_ROLES,
         "RESP": JOB1_RESP,
-        "LOGO": "assets/gp.svg"
+        "LOGO": "assets/gp.svg",
     },
     {
         "COMPANY": "Ericsson Global India Limited (Telecom Leader)",
@@ -177,14 +263,14 @@ JOBS = [
         "IMPACT": "Telecom Infrastructure at Scale | 50M+ Subscribers",
         "ROLES": JOB2_ROLES,
         "RESP": JOB2_RESP,
-        "LOGO": "assets/ericsson.png"
-    }
+        "LOGO": "assets/ericsson.png",
+    },
 ]
 
 # Professional certifications and achievements
 CERTIFICATIONS = """
 🏆 **AWS Certified Solutions Architect – Professional** (Feb 2023)\n
-🏅 **AWS Certified Solutions Architect – Associate** (Dec 2019)\n  
+🏅 **AWS Certified Solutions Architect – Associate** (Dec 2019)\n
 🥇 **Circle of Excellence Award** - Global Payments Inc (Apr 2020)\n
 🏆 **Innovation Challenge Hackathon Winner** (Sept 2020 & Aug 2021)\n
 🎖️ **President's Award** - Ericsson (Nov 2016) - $2M Revenue Recovery\n
@@ -197,7 +283,7 @@ LEADERSHIP_PHILOSOPHY = """
 
 **Core Approach:**
 - 🎯 **Business-First Mindset:** Aligning technical excellence with measurable business outcomes
-- 🌟 **Innovation Culture:** Fostering environments where breakthrough solutions emerge naturally  
+- 🌟 **Innovation Culture:** Fostering environments where breakthrough solutions emerge naturally
 - 🤝 **Collaborative Excellence:** Building cross-functional teams that deliver exceptional results
 - 📈 **Continuous Evolution:** Staying ahead of industry trends while maintaining operational excellence
 """
@@ -209,5 +295,17 @@ IMPACT_METRICS = {
     "efficiency_improvements": "60%",
     "team_scaling": "1→6 engineers",
     "uptime_achieved": "99.9%",
-    "deployment_acceleration": "85%"
+    "deployment_acceleration": "85%",
 }
+
+ONGOING_FUTURE_DEVELOPMENT = """
+        **Ongoing Professional Development:**
+        - 🎯 EKS/GKE/AKS Administration & Best Practices
+        - 🎯 MLOps Pipelines
+        - 🎯 Machine Learning Theo
+        ry
+        - 🎯 LangChain Integration
+        - 🎯 AWS Strands Integration
+        - 🎯 Helm & ARGO CD for GitOps Pipelines
+        - 🎯 ReCertify AWS Solutions Architect Professional by 2026
+        """
