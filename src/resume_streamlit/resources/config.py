@@ -213,13 +213,13 @@ EXECUTIVE_SUMMARY = """
  automation excellence.\n
 **Specialties:**
  - **AWS Certified Solutions Architect**
- - **Infrastructure Automation**
- - Cloud Migration
- - **DevSecOps Implementation**
- - **Site Reliability**
- -  Team Leadership
- - **Cost Optimization**
  - **CI/CD Pipelines Optimization**
+ - **Site Reliability**
+ - **DevSecOps Implementation**
+ - *Infrastructure Automation*
+ - *Cloud Migration*
+ - *Team Building*
+ - *Cost Optimization*
 """
 
 
@@ -257,7 +257,7 @@ JOBS = [
     },
     {
         "COMPANY": "Ericsson Global India Limited (Telecom Leader)",
-        "POSITION": "Sr Solution Integration Engineer & Infrastructure Architect",
+        "POSITION": "Sr Solution Integration Engineer & Sr Engineer ",
         "DURATION": "DEC/2011 - JUN/2018",
         "LOCATION": "Noida, India",
         "IMPACT": "Telecom Infrastructure at Scale | 50M+ Subscribers",

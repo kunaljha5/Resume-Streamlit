@@ -539,28 +539,9 @@ button[kind="header"][data-testid="baseButton-header"] {
     display: none !important;
 }
 
-/* Alternative selectors for different Streamlit versions */
-.css-1rs6os,
-.css-17eq0hr,
-section[data-testid="stSidebar"] button[kind="secondary"] {
-    display: none !important;
-}
 
-/* Ensure sidebar stays visible and expanded */
-section[data-testid="stSidebar"] {
-    min-width: 244px !important;
-    max-width: 244px !important;
-    transform: translateX(0px) !important;
-    transition: none !important;
-}
-
-/* Prevent sidebar from collapsing */
-section[data-testid="stSidebar"][aria-expanded="false"] {
-    transform: translateX(0px) !important;
-    min-width: 244px !important;
-}
-
-/* Hide any collapse controls */
-div[data-testid="stSidebar"] div[data-testid="stVerticalBlock"] > div:first-child button {
-    display: none !important;
-}
+        /* Sidebar width */
+[data-testid="stSidebar"] {
+            min-width: 300px;
+            max-width: 400px;
+        }

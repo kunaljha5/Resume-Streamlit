@@ -53,7 +53,7 @@ def get_base64_image(image_path):
 
 
 def work_history(index):
-    st.markdown('<div class="work-history-item">', unsafe_allow_html=True)
+    # st.markdown('<div class="work-history-item">', unsafe_allow_html=True)
 
     # Company header with modern card design
     logo_filename = cfg.JOBS[index]["LOGO"]
@@ -228,18 +228,13 @@ def home_page():
 
 def sidebar():
     with st.sidebar:
-        st.markdown('<div class="sidebar-header">', unsafe_allow_html=True)
+        # st.markdown('<div class="sidebar-header">', unsafe_allow_html=True)
         st.title("📋 Navigation")
-        st.markdown("</div>", unsafe_allow_html=True)
-
-        st.markdown("---")
+        # st.markdown("</div>", unsafe_allow_html=True)
 
         # Add current section indicator
         st.markdown("**Current Section:**")
         st_section = st.radio("Choose a section:", cfg.SECTIONS, label_visibility="collapsed")
-
-        st.markdown("---")
-
         # Add quick stats or info
         st.markdown("**Quick Stats:**")
         st.markdown("📊 13+ Years Experience")
@@ -247,88 +242,6 @@ def sidebar():
         st.markdown("🚀 50+ Deployments")
         st.markdown("🏆 5+ Certifications")
     return st_section
-
-
-# def st_routing(st_section):
-#     if st_section == "Executive Summary":
-#         st.write("\n")
-#         st.markdown(cfg.EXECUTIVE_SUMMARY)
-#
-#     elif st_section == "Core Competencies":
-#         st.markdown('<div class="skills-section">', unsafe_allow_html=True)
-#         st.subheader("_Core Competencies & Technical Expertise_")
-#         st.write("")
-#
-#         tabs = st.tabs(
-#             [
-#                 "☁️ Cloud Architecture",
-#                 "🔒 DevSecOps",
-#                 "📊 Site Reliability",
-#                 "🔄 CI/CD & Release",
-#                 "💻 Development & Data",
-#             ]
-#         )
-#
-#         skills_mapping = {
-#             0: "Cloud & Infrastructure Excellence",
-#             1: "DevSecOps & Security",
-#             2: "Observability & Site Reliability Engineering",
-#             3: "CI/CD & Release Engineering",
-#             4: "Programming & Automation",
-#         }
-#
-#         for i, tab in enumerate(tabs):
-#             with tab:
-#                 if i in skills_mapping and skills_mapping[i] in cfg.SKILLS:
-#                     section_data = cfg.SKILLS[skills_mapping[i]]
-#                     for category, skills_list in section_data.items():
-#                         st.markdown(f"**{category}:**")
-#                         st.markdown(" - " + ", ".join(skills_list))
-#                         st.markdown("")
-#                 else:
-#                     st.markdown("*Section content not available*")
-#
-#     elif st_section == "Current & Past Roles":
-#         st.write("\n")
-#         st.subheader("_Current Role_")
-#         work_history(0)
-#
-#         for each in range(1, len(cfg.JOBS)):
-#             work_history(each)
-#
-#     elif st_section == "Key Achievements & Recognition":
-#         st.markdown('<div class="achievements-section">', unsafe_allow_html=True)
-#         st.subheader("_Key Achievements & Recognition_")
-#         st.markdown("**🏆 Notable accomplishments and successful project deliveries**")
-#         st.write("")
-#
-#         for i, project in enumerate(cfg.PROJECTS.keys(), 1):
-#             with st.container():
-#                 st.markdown(f"**{i}.** {project}")
-#                 st.write("")
-#
-#         st.markdown("</div>", unsafe_allow_html=True)
-#
-#     elif st_section == "Professional Development":
-#         st.markdown('<div class="certifications-section">', unsafe_allow_html=True)
-#         st.subheader("_Professional Development & Certifications_")
-#
-#         cert_tabs = st.tabs(["🏅 Current Certifications", "📖 Learning Path"])
-#
-#         with cert_tabs[0]:
-#             st.markdown(cfg.CERTIFICATIONS)
-#
-#         with cert_tabs[1]:
-#             st.markdown(cfg.ONGOING_FUTURE_DEVELOPMENT)
-#         st.markdown("</div>", unsafe_allow_html=True)
-#
-#     elif st_section == "Education & Background":
-#         st.markdown('<div class="education-section">', unsafe_allow_html=True)
-#         st.subheader("_Education & Academic Foundation_")
-#         st.markdown("**🎓 Academic background and foundational knowledge**")
-#         st.write("")
-#         st.markdown(cfg.EDUCATION)
-#         st.markdown("</div>", unsafe_allow_html=True)
 
 
 def render_executive_summary():
@@ -372,11 +285,11 @@ def render_core_competencies():
 
 
 def render_current_roles():
-    st.write("\n")
+    # st.write("\n")
     st.subheader("_Current Role_")
-    work_history(0)
+    # work_history(0)
 
-    for each in range(1, len(cfg.JOBS)):
+    for each in range(0, len(cfg.JOBS)):
         work_history(each)
 
 
