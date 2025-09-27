@@ -1,0 +1,21 @@
+repos:
+  # Use ruff for linting and fixing
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.8.4
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+
+  # Keep bandit if you need advanced security analysis
+  - repo: https://github.com/PyCQA/bandit
+    rev: 1.8.6
+    hooks:
+      - id: bandit
+        args: ["--configfile", "bandit.yaml", "-r", "."]
+
+  # Keep mypy for type checking
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.18.2
+    hooks:
+      - id: mypy

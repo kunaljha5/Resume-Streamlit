@@ -1,4 +1,5 @@
 # Resume-Streamlit
-Digital Resume Of DevOps Engineer Kunal Jha
+
+Digital Resume Of Kunal Jha
 
 ---

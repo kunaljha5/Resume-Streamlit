@@ -1,0 +1,11 @@
+# bandit.yml (YAML format)
+exclude_dirs:
+  - tests
+  - venv
+  - .venv
+  - env
+  - .env
+  - __pycache__
+skips:
+  - B101
+  - B601

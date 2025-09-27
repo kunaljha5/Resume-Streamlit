@@ -1,0 +1,100 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "resume-streamlit"
+version = "0.1.0"
+description = "This is kunal Jha resume"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pillow>=11.3.0",
+    "streamlit>=1.50.0",
+]
+
+# Entry points (CLI commands)
+[project.scripts]
+resume-app = "resume_streamlit.main:main"
+
+# Tool configurations
+[tool.hatch.build.targets.wheel]
+packages = ["src/resume_streamlit"]
+[tool.hatch.build.targets.wheel.shared-data]
+"src/resume_streamlit/assets" = "resume_streamlit/assets"
+"src/resume_streamlit/styles" = "resume_streamlit/styles"
+
+[dependency-groups]
+dev = [
+    "bandit>=1.8.6",
+    "black>=25.9.0",
+    "flake8>=7.3.0",
+    "isort>=6.0.1",
+    "mypy>=1.18.2",
+    "pre-commit>=4.3.0",
+    "pytest-mock>=3.12.0",
+    "pytest-cov>=6.0.0",
+    "ruff>=0.13.2",
+    "vulture>=2.14",
+]
+
+[tool.mypy]
+explicit_package_bases = true
+
+
+[tool.ruff]
+# General settings
+line-length = 170
+target-version = "py312"  # or your Python version
+
+# Exclude directories
+exclude = [
+    ".git",
+    "__pycache__",
+    ".venv",
+    "venv",
+    "tests",
+    "migrations",
+]
+
+[tool.ruff.lint]
+# Enable specific rule categories
+select = [
+    "F",    # Pyflakes (unused imports, variables)
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "I",    # isort (import sorting)
+    "UP",   # pyupgrade (modern Python)
+    "S",    # bandit (security)
+    "C90",  # mccabe (complexity)
+    "N",    # pep8-naming
+    "B",    # flake8-bugbear
+    "A",    # flake8-builtins
+    "COM",  # flake8-commas
+    "Q",    # flake8-quotes
+]
+
+# Ignore specific rules if needed
+ignore = [
+    "S101",  # Use of assert
+    "S608",  # Possible SQL injection (if you handle it properly)
+    "COM812", # Trailing comma missing (conflicts with formatter)
+    "COM819", # Trailing comma prohibited (conflicts with formatter)
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101", "S106"]  # Allow asserts and hardcoded passwords in tests
+"**/migrations/*" = ["E501"]  # Long lines in migrations
+"__init__.py" = ["F401"]      # Unused imports in __init__.py files
+
+[tool.ruff.lint.isort]
+known-first-party = ["resume-streamlit"]  # Replace with your package name
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.format]
+# Format configuration
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
