@@ -1,128 +1,213 @@
 # --- GENERAL SETTINGS ---
-PAGE_TITLE = "DevOps Professional | Kunal Jha"
-PAGE_ICON = ":wave:"
-NAME = "_Kunal Jha_"
-DESCRIPTION = f"Senior DevOps Engineer, specializing in automation and optimizing CI/CD processes " \
-              f"for seamless and efficient software delivery in enterprise environments."
+PAGE_TITLE = "DevSecOps Expert | Kunal Jha"
+PAGE_ICON = "🚀"
+NAME = "Kunal Jha"
+# Split description for better layout
+HEADER_TITLE = "DevSecOps Expert | Cloud Architecture Strategist | Site Reliability Engineering Expert"
+
+HEADER_CONTACT = """📍Riyadh, KSA"""
+
+HEADER_SUMMARY = """Visionary DevOps Expert with 13+ years architecting enterprise-scale cloud transformations for 50M+ users across government, fintech, and telecom sectors. AWS Certified Solutions Architect Professional who has driven $2M+ revenue recoveries and delivered 60% deployment efficiency gains through strategic DevSecOps implementations."""
+
 EMAIL = "kunaljha5@gmail.com"
 SOCIAL_MEDIA = {
     "LinkedIn": "https://linkedin.com/in/kunaljha5",
-    "GitHub": "https://github.com/kunaljha5"
+    "GitHub": "https://github.com/kunaljha5",
+    "Mobile": "+91-9654633530"
 }
 
-
+# Enhanced projects with impact metrics
 PROJECTS = {
-    "🏆 AWS Dev Environment - Full infrastructure setup on AWS Cloud for Clearance and Settlement platform": "cloud/"
-                                                                                                            "internal",
-    "🏆 Jenkins Migration - Migrated Pipelines from Bamboo to Jenkins": "CICD/internal",
-    "🏆 Slack Commands - Slack Commands to to giving easy access to applications and environment": "automation/internal",
-    "🏆 Release Automation - Create Release Automation Framework in python to automate the Release work.": "automation"
-                                                                                                          "/internal"
+    "🏆 Government Digital Platform - Mission-critical infrastructure serving 9M+ citizens with 99.9% uptime": "cloud/government-scale",
+    "🚀 DevSecOps Transformation - Zero-trust architecture with HashiCorp Vault across multi-cloud environments": "security/devsecops",
+    "⚡ CI/CD Pipeline Optimization - 35% efficiency improvement enabling zero-downtime deployments for 120+ microservices": "automation/cicd-optimization",
+    "💰 Cost Optimization Initiative - 45% infrastructure cost reduction through intelligent resource orchestration": "cloud/cost-optimization",
+    "🎯 Disaster Recovery Architecture - <30-minute RTO with automated failover capabilities": "infrastructure/disaster-recovery",
+    "📊 Observability Platform - Comprehensive monitoring with Prometheus, Grafana, and custom Elasticsearch dashboards": "monitoring/observability",
+    "🔧 Internal Developer Portal - FastAPI/PostgreSQL platform boosting developer productivity by 40%": "automation/developer-portal",
+    "☁️ AWS Cloud Migration - Enterprise fintech infrastructure supporting millions of daily transactions": "cloud/fintech-migration"
 }
 
-
+# Updated role progression with strategic titles
 JOB0_ROLES = """
-|            Role             |      Duration       |
-|:---------------------------:|:-------------------:|
-| Associate DevOps Consultant | JUL/2022 - Present  |
-|    Lead DevOps Engineer     | JAN/2021 - JUL/2022 |
-|       DevOps Engineer       | OCT/2019 - JAN/2021 |
-|            SDET             | JUN/2018 - OCT/2019 |
+|                    Role                     |        Duration         |
+|:-------------------------------------------:|:-----------------------:|
+|    Senior DevOps Consultant & Tech Advisor |    NOV/2023 - Present   |
 """
-
-
 
 JOB0_RESP = """
-    - ► Deployed solutions in test and production environments using Ansible and Jenkins.
-    - ► Utilized various DevOps tools like Bitbucket, Bamboo, Jira, Gradle, Ansible, and Confluence.
-    - ► Conducted proof-of-concepts for integrating Mobile Recharge apps with cloud technologies.
-    - ► Managed Ansible playbook for server setup and application deployment.
-    - ► Implemented Grafana for real-time monitoring of voice/sms/data and recharge traffic.
-    - ► Jira Administrator skilled in end-to-end project management and CI tool integration.
-    - ► Managed Docker image and container deployment for microservices.
-    - ► Focused on automation, integration, monitoring, and configuration management.
-    - ► Integrated Bamboo, Bitbucket, Confluence, and Jira for automated release process.
-    - ► Provided Linux administration services to customers in Africa.
-    - ► Completed load and performance testing of Ericsson IN systems.
+    - 🏆 **Spearheaded** end-to-end DevSecOps transformation for Saudi Arabia's largest digital government initiative serving 9M+ citizens with 99.9% availability SLA
+    - 🚀 **Architected** next-generation security infrastructure using HashiCorp Vault enterprise deployment with zero-trust architecture and AppRole authentication
+    - ⚡ **Revolutionized** CI/CD efficiency by 35% through intelligent pipeline orchestration, integrating SonarQube quality gates and Trivy security scanning
+    - 📊 **Engineered** comprehensive observability platform combining Prometheus, Grafana, AlertManager, and PagerDuty achieving 40% faster MTTR
+    - 🎯 **Delivered** strategic disaster recovery architecture with automated failover capabilities guaranteeing <30-minute RTO
+    - 💡 **Innovated** Internal Developer Portal using FastAPI/PostgreSQL with intelligent Slack automation boosting productivity by 40%
+    - 📈 **Optimized** infrastructure costs by 20% through intelligent resource orchestration and APM-driven capacity planning
+    - 🎓 **Mentored** cross-functional teams on cloud-native best practices and DevSecOps culture, establishing knowledge-sharing frameworks
     """
-
 
 JOB1_ROLES = """
-|            Role             |      Duration       |
-|:---------------------------:|:-------------------:|
-| Senior Integration Engineer | SEP/2017 - JUN/2018 |
-|       Senior Engineer       | APR/2015 - SEP/2017 |
-|      Services Engineer      | DEC/2011 - APR/2015 |
+|                    Role                     |        Duration         |
+|:-------------------------------------------:|:-----------------------:|
+|  Platform Innovation Lead & DevOps Architect|    JUN/2020 - NOV/2023  |
+|     Senior DevOps Engineer & Automation Lead|    JUN/2018 - JUN/2020  |
 """
-
 
 JOB1_RESP = """
-    - ► Implemented Jenkins-JIRA solution to streamline on-boarding and improve efficiency.
-    - ► Automated bi-weekly releases using Python framework, Jenkins, and MySQL database.
-    - ► Provided daily support, ensuring smooth build and deployment processes.
-    - ► Integrated Spring Config Server and established pipeline for production environment promotion.
-    - ► Deployed AWS Pinpoint with event stream processing and storage using Terraform.
-    - ► Created AWS infrastructure for clearance and settlement platforms using Terraform and Jenkins.
-    - ► Conducted proof-of-concept for transitioning to AWS Connect for IVR system.
-    - ► Implemented GitOps-controlled automation for building Jenkins Docker images.
-    - ► Streamlined Jenkins container deployment with seamless updates using Linux service scripts.
-    - ► Integrated Slack, AWS API Gateway, MySQL, and Lambda for efficient information retrieval.
-    - ► Implemented synthetic monitoring solution using AWS CloudWatch and Python scripts.
-    - ► Facilitated comprehensive training on CI/CD tools and technologies for new hires.
-    - ► Streamlined regression suite testing with Jenkins, AWS EC2 instances, and shared libraries.
-    - ► Integrated Active Directory for Federated Access across Bamboo, Jenkins, Confluence, and Bitbucket.
-    - ► Routinely upgraded DevOps tools to stay current with latest features and improvements.
-    - ► Optimized database release process with Python, MySQL, and Datical/Liquibase integration.
+    - 🏅 **Founded and scaled** India DevOps Center of Excellence from 1 to 6 engineers, establishing industry-leading practices for high-frequency trading infrastructure
+    - 🥇 **Circle of Excellence Award Winner** & **Innovation Challenge Hackathon Champion** (2020, 2021) for breakthrough automation solutions
+    - ☁️ **Designed** enterprise AWS cloud-native architecture using Infrastructure as Code (Terraform, CloudFormation) for distributed payment systems
+    - 📊 **Built** real-time business intelligence platform with AWS Kinesis data streaming and S3 data lakes for fraud detection and customer behavior analysis
+    - ⚙️ **Automated** end-to-end release management achieving 70% manual effort reduction and 50% deployment error elimination
+    - 🚄 **Accelerated** application onboarding by 85% (2 weeks → 3 days) through GitOps automation and Jenkins-Jira integration
+    - 💰 **Achieved** 45% infrastructure cost optimization by implementing on-demand EC2 orchestration for automated regression testing
+    - 🔄 **Engineered** database schema deployment automation improving release velocity by 60% with zero-downtime migrations
+    - 🔐 **Established** enterprise federated authentication standards across DevOps toolchain improving security posture and user experience
     """
 
-
-EDUCATION = """
-| Degree | Institute  | University | Completion Year |          Major          | Percentage |
-|:------:|:----------:|:----------:|:---------------:|:-----------------------:|:----------:|
-| B.Tech |    JNIT    |    RTU     |    July 2011    |   Electronics & Comm.   |   76.5%    |
-|  12th  | St. Paul's |    BSER    |    May 2006     |     Math & Science      |   71.0%    |
-|  10th  |   Modern   |    BSER    |    June 2004    | All Compulsory Subjects |   71.0%    |
+JOB2_ROLES = """
+|                    Role                     |        Duration         |
+|:-------------------------------------------:|:-----------------------:|
+|   Sr Solution Integration Engineer          |   SEP/2015 - JUN/2018   |
+|       Services Engineer                     |   DEC/2011 - SEP/2015   |
 """
 
-
-SKILLS = """
-    - 👩‍💻 Programming: Python, Groovy, Bash Scripting
-    - 📊 CI CD Tools: Jenkins, Bamboo, Artifactory, Bitbucket, Jira, Confluence, 
-    - 🗄️ Databases: Oracle, MySQL
+JOB2_RESP = """
+    - 🌍 **Deployed** mission-critical telecom solutions across multi-continent infrastructure supporting 50M+ subscribers with 99.5% uptime SLA
+    - 🤖 **Pioneered** Infrastructure as Code adoption with Ansible playbook frameworks, reducing manual provisioning by 80%
+    - 📈 **Implemented** comprehensive Grafana monitoring solutions for voice, SMS, data, and recharge traffic improving incident response by 40%
+    - 🎯 **Administered** enterprise Jira platform managing 20+ projects with integrated CI/CD workflows streamlining release management
+    - 🐳 **Orchestrated** Docker containerization for microservices architecture enabling high-availability telecom applications
+    - 🔧 **Integrated** comprehensive DevOps toolchain (Bamboo, Bitbucket, Confluence, Jira) with Python optimization
+    - 💻 **Led** Linux administration for African telecom operators maintaining 99.5% system reliability across distributed data centers
+    - 🏆 **President's Award Winner** (Nov 2016) - Resolved $2M revenue-critical issue in mobile data traffic management
     """
 
+EDUCATION = """
+| Degree | Institute  | University | Completion Year |          Major          | Grade/Percentage |
+|:------:|:----------:|:----------:|:---------------:|:-----------------------:|:---------------:|
+| B.Tech |    JNIT    |    RTU     |    July 2011    |   Electronics & Comm.   |     76.5%      |
+|  12th  | St. Paul's |    BSER    |    May 2006     |     Math & Science      |     71.0%      |
+|  10th  |   Modern   |    BSER    |    June 2004    | All Compulsory Subjects |     71.0%      |
+"""
+
+# Enhanced skills with strategic categorization
+SKILLS = """
+### Cloud & Infrastructure Excellence
+**AWS Ecosystem Mastery:** EC2, S3, EKS, Lambda, CloudWatch, MSK, IAM, Route53, API Gateway, Connect
+**Infrastructure as Code:** Terraform, Ansible, CloudFormation, GitOps Workflows
+**Container Orchestration:** Docker, Kubernetes, EKS, Service Mesh Architecture
+
+### DevSecOps & Security
+**Security Automation:** HashiCorp Vault, AWS Secrets Manager, SonarQube, Trivy Scanner
+**DevSecOps Practices:** Zero-Trust Architecture, Compliance Automation, Vulnerability Management
+**Identity & Access:** RBAC, Federated Authentication, SSO Integration
+
+### Observability & Site Reliability Engineering
+**Monitoring Platforms:** Prometheus, Grafana, AlertManager, PagerDuty, Elastic Stack (ELK)
+**APM & Tracing:** Distributed tracing, Performance optimization, Capacity planning
+**Incident Management:** SLA/SLO definition, MTTR optimization, Blameless post-mortems
+
+### CI/CD & Release Engineering
+**Pipeline Orchestration:** Jenkins, GitLab CI/CD, GitHub Actions, Bamboo
+**Release Management:** Blue-green deployments, Canary releases, Feature flagging
+**Quality Engineering:** Automated testing, Code quality gates, Security scanning
+
+### Programming & Automation
+**Languages:** Python, Shell/Bash, Groovy, Perl, SQL
+**Databases:** MySQL, PostgreSQL, Redis, Elasticsearch, MinIO
+**API Management:** RESTful services, GraphQL, Microservices communication
+    """
 
 SECTIONS = [
-    "Experience Qualifications",
-    "Skills",
-    "Current Employer",
-    "Past Employer",
-    "Accomplishments"
+    "Executive Summary",
+    "Core Competencies",
+    "Current & Past Roles",
+    "Key Achievements & Recognition",
+    "Professional Development",
+    "Education & Background"
 ]
 
+# Executive Summary
+EXECUTIVE_SUMMARY = """
+**Visionary DevOps Expert** with 13+ years architecting enterprise-scale cloud transformations for 50M+ users across government, fintech, and telecom sectors. **AWS Certified Solutions Architect Professional** who has driven $2M+ revenue recoveries and delivered 60% deployment efficiency gains through strategic DevSecOps implementations.
 
+**Core Impact Areas:** Infrastructure Automation • Cloud Migration Strategy • DevSecOps Culture Transformation • Site Reliability Engineering • High-Performance Team Building • Cost Optimization Excellence
+
+**Philosophy:** Building resilient, self-healing systems while fostering innovation-driven engineering cultures that deliver measurable business outcomes.
+"""
+
+# Enhanced summary with Expert positioning
 SUMMARY = """
-    - ✔️ 11+ Years of Experience in optimizing critical deployments across large infrastructure
-    - ✔️ Strong hands on experience in Linux, AWS, Terraform, Python & Jenkins
-    - ✔️ Good understanding of CI/CD , Change and Release processes
-    - ✔️ Excellent team-player and displaying strong sense of initiative on tasks
+    - 🚀 **Visionary DevOps Expert** with 13+ years architecting enterprise-scale cloud transformations for 50M+ users
+    - 🏆 **AWS Certified Solutions Architect Professional** driving $2M+ revenue recoveries and 60% deployment efficiency gains
+    - 🔒 **DevSecOps Pioneer** implementing zero-trust architectures and security-first infrastructure for government and fintech sectors
+    - 🌟 **Team Builder & Mentor** who scaled DevOps teams and established Centers of Excellence across multiple organizations
+    - 💰 **Cost Optimization Expert** achieving consistent 20-45% infrastructure cost reductions while improving performance
+    - 🎯 **Innovation Champion** with multiple hackathon wins and industry awards for breakthrough automation solutions
     """
 
-
+# Updated jobs structure with enhanced positioning
 JOBS = [
     {
-        "COMPANY": "Ericsson",
-        "DURATION": "DEC/2011 - JUN/2018",
+        "COMPANY": "BVS-MEA (Saudi Arabia Government Contractor)",
+        "POSITION": "Senior DevOps Consultant & Strategic Technology Advisor",
+        "DURATION": "NOV/2023 - Present",
+        "LOCATION": "Riyadh, Saudi Arabia",
+        "IMPACT": "Mission-Critical Government Platform | 9M+ Active Citizens",
         "ROLES": JOB0_ROLES,
-        "RESP": JOB0_RESP
+        "RESP": JOB0_RESP,
+        "LOGO": "assets/bvs.png"
     },
     {
-        "COMPANY": "Global Payments",
-        "DURATION": "JUN/2018 - Present",
+        "COMPANY": "Global Payments Inc (Fortune 500 Fintech)",
+        "POSITION": "Associate DevOps Consultant & Platform Innovation Lead",
+        "DURATION": "JUN/2018 - NOV/2023",
+        "LOCATION": "Noida, India",
+        "IMPACT": "High-Frequency Trading Infrastructure | Millions of Daily Transactions",
         "ROLES": JOB1_ROLES,
-        "RESP": JOB1_RESP
+        "RESP": JOB1_RESP,
+        "LOGO": "assets/gp.svg"
+    },
+    {
+        "COMPANY": "Ericsson Global India Limited (Telecom Leader)",
+        "POSITION": "Sr Solution Integration Engineer & Infrastructure Architect",
+        "DURATION": "DEC/2011 - JUN/2018",
+        "LOCATION": "Noida, India",
+        "IMPACT": "Telecom Infrastructure at Scale | 50M+ Subscribers",
+        "ROLES": JOB2_ROLES,
+        "RESP": JOB2_RESP,
+        "LOGO": "assets/ericsson.png"
     }
 ]
 
+# Professional certifications and achievements
 CERTIFICATIONS = """
+🏆 **AWS Certified Solutions Architect – Professional** (Feb 2023)\n
+🏅 **AWS Certified Solutions Architect – Associate** (Dec 2019)\n  
+🥇 **Circle of Excellence Award** - Global Payments Inc (Apr 2020)\n
+🏆 **Innovation Challenge Hackathon Winner** (Sept 2020 & Aug 2021)\n
+🎖️ **President's Award** - Ericsson (Nov 2016) - $2M Revenue Recovery\n
+📈 **Quarterly Award** - NetSpend DCS AWS Environment Delivery (Apr 2023)\n
 """
+
+# Leadership philosophy and vision
+LEADERSHIP_PHILOSOPHY = """
+**"Transforming complex infrastructure challenges into scalable, secure, and cost-effective solutions that drive business growth and innovation."**
+
+**Core Approach:**
+- 🎯 **Business-First Mindset:** Aligning technical excellence with measurable business outcomes
+- 🌟 **Innovation Culture:** Fostering environments where breakthrough solutions emerge naturally  
+- 🤝 **Collaborative Excellence:** Building cross-functional teams that deliver exceptional results
+- 📈 **Continuous Evolution:** Staying ahead of industry trends while maintaining operational excellence
+"""
+
+# Key metrics and impact numbers
+IMPACT_METRICS = {
+    "users_served": "50M+",
+    "cost_savings": "$2M+",
+    "efficiency_improvements": "60%",
+    "team_scaling": "1→6 engineers",
+    "uptime_achieved": "99.9%",
+    "deployment_acceleration": "85%"
+}

@@ -1,32 +1,522 @@
-@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Readex+Pro:wght@300;400;500;600;700&display=swap');
 
+/* Base font styling with improved hierarchy */
+* {
+    font-family: 'Inter', 'Readex Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+}
 
-* {font-family: 'Readex Pro';}
+/* Root variables for consistent color scheme */
+:root {
+    --primary-accent: #e91e63;
+    --background-primary: #1a1a1a;
+    --background-secondary: #2d2d2d;
+    --text-primary: #f5f5f5;
+    --text-secondary: #b0b0b0;
+    --border-color: rgba(245, 245, 245, 0.1);
+}
 
+/* Bold text enhancement with new color scheme */
+strong, b {
+    color: var(--primary-accent) !important;
+    font-weight: 600 !important;
+    text-shadow: none;
+}
 
+/* Alternative bold styling - uncomment if you prefer yellow */
+/* strong, b {
+    color: #fdf6e3 !important;
+    font-weight: 700 !important;
+    text-shadow: 0 0 1px rgba(253, 246, 227, 0.4);
+} */
+
+/* Header section improvements */
+.main-header {
+    padding-bottom: 1.5rem;
+}
+
+/* Improved typography hierarchy */
+h1 {
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    color: var(--text-primary) !important;
+    margin-bottom: 0.5rem !important;
+    line-height: 1.2 !important;
+}
+
+h2 {
+    font-size: 1.75rem !important;
+    font-weight: 600 !important;
+    color: var(--primary-accent) !important;
+    margin-bottom: 1rem !important;
+    margin-top: 2rem !important;
+}
+
+h3 {
+    color: var(--primary-accent) !important;
+    margin-bottom: 1rem !important;
+    font-weight: 600 !important;
+    font-size: 1.25rem !important;
+}
+
+/* Body text improvements */
+p, .stMarkdown p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    color: var(--text-primary) !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Enhanced link styling with smooth transitions */
 a {
     text-decoration: none;
-    color: white !important;
+    color: var(--primary-accent) !important;
     font-weight: 500;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
 }
 
 a:hover {
-    color: #d33682 !important;
+    color: var(--text-primary) !important;
+    background-color: var(--primary-accent);
     text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(233, 30, 99, 0.3);
 }
 
-ul {list-style-type: none;}
+/* Contact links with modern card design */
+.contact-links {
+    margin-bottom: 0.5rem;
+}
 
+.contact-links a {
+    background-color: var(--background-secondary);
+    border: 1px solid var(--border-color);
+    margin-right: 0.75rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    font-weight: 500;
+    text-align: center;
+    min-width: 80px;
+}
+
+.contact-links a:hover {
+    border-color: var(--primary-accent);
+}
+
+/* List styling */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Subtle horizontal line styling */
 hr {
-    margin-top: 0px;
-    margin-bottom: 5%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+    opacity: 1;
 }
 
+/* Table styling */
 table {
     width: 100%;
+    margin-bottom: 1rem;
 }
 
+/* Info box enhancements with new color scheme */
+.stInfo {
+    background-color: rgba(233, 30, 99, 0.08) !important;
+    border-left: 3px solid var(--primary-accent) !important;
+    border-radius: 8px !important;
+}
 
+/* Enhanced sidebar styling */
+.css-1d391kg, [data-testid="stSidebar"] {
+    background-color: var(--background-secondary) !important;
+    border-right: 1px solid var(--border-color);
+}
+
+/* Sidebar navigation improvements */
+[data-testid="stSidebar"] .stRadio > div {
+    background-color: transparent;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+[data-testid="stSidebar"] .stRadio > div:hover {
+    background-color: rgba(233, 30, 99, 0.1);
+}
+
+/* Active sidebar item */
+[data-testid="stSidebar"] .stRadio > div[data-checked="true"] {
+    background-color: var(--primary-accent) !important;
+    color: white !important;
+}
+
+/* Sidebar title */
+[data-testid="stSidebar"] h1 {
+    color: var(--primary-accent) !important;
+    font-size: 1.2rem !important;
+    margin-bottom: 1.5rem !important;
+    text-align: center;
+    border-bottom: 2px solid var(--primary-accent);
+    padding-bottom: 0.5rem;
+}
+
+/* Modern section headers */
+.section-header {
+    border-bottom: 2px solid var(--primary-accent);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, var(--primary-accent), transparent);
+    background-size: 100% 2px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+/* Modern company header cards */
+.company-header {
+    background-color: var(--background-secondary);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--primary-accent);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.company-header:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Improved spacing and layout */
+.stMarkdown {
+    margin-bottom: 1rem;
+}
+
+.stSubheader {
+    margin-top: 2rem !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Container improvements */
+.main .block-container {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+    max-width: 1200px !important;
+}
+
+/* Tab styling improvements */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 0.5rem;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background-color: var(--background-secondary);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1rem;
+    color: var(--text-secondary);
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+    background-color: rgba(233, 30, 99, 0.1);
+    border-color: var(--primary-accent);
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: var(--primary-accent) !important;
+    color: white !important;
+    border-color: var(--primary-accent) !important;
+}
+
+/* Expander improvements */
+.streamlit-expander {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.streamlit-expander-header {
+    background-color: var(--background-secondary);
+    border-radius: 8px 8px 0 0;
+    font-weight: 500;
+}
+
+/* Hide Streamlit elements and add profile image styling */
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
 header {visibility: hidden;}
+
+/* Profile image enhancements */
+img[data-testid="stImage"] {
+    border-radius: 50% !important;
+    border: 3px solid var(--primary-accent) !important;
+    box-shadow: 0 4px 12px rgba(233, 30, 99, 0.3) !important;
+    transition: transform 0.3s ease !important;
+}
+
+img[data-testid="stImage"]:hover {
+    transform: scale(1.02) !important;
+}
+
+/* List improvements */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    padding: 0.25rem 0;
+    border-left: 2px solid transparent;
+    padding-left: 1rem;
+    transition: all 0.2s ease;
+}
+
+li:hover {
+    border-left-color: var(--primary-accent);
+    background-color: rgba(233, 30, 99, 0.05);
+}
+
+/* New component styles */
+.hero-container {
+    background: linear-gradient(135deg, var(--background-secondary) 0%, var(--background-primary) 100%);
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-content {
+    text-align: left;
+}
+
+/* Refined job titles with better hierarchy */
+.job-titles {
+    font-size: 1.3rem !important;
+    font-weight: 500 !important;
+    color: #ff69b4 !important; /* Softer pink variant */
+    line-height: 1.4 !important;
+    margin: 0.75rem 0 1rem 0 !important;
+    opacity: 0.9;
+}
+
+/* Enhanced contact details visibility */
+.contact-details {
+    font-size: 1.1rem !important;
+    font-weight: 400 !important;
+    color: var(--text-primary) !important;
+    line-height: 1.5 !important;
+    margin-bottom: 0.5rem !important;
+    background-color: rgba(245, 245, 245, 0.05);
+    padding: 0.75rem;
+    border-radius: 8px;
+    border-left: 3px solid rgba(233, 30, 99, 0.3);
+}
+
+.contact-section {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Enhanced 'Let's Connect' header with better spacing */
+.connect-header {
+    font-size: 1.4rem !important;
+    font-weight: 600 !important;
+    color: var(--primary-accent) !important;
+    margin-bottom: 1.5rem !important;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(233, 30, 99, 0.3);
+}
+
+/* Primary contact links styling */
+.primary-contact a {
+    background-color: var(--primary-accent) !important;
+    color: white !important;
+    font-weight: 500;
+    border: none !important;
+}
+
+.primary-contact a:hover {
+    background-color: #d81b60 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(233, 30, 99, 0.4) !important;
+}
+
+/* Utility button (Print) with distinct styling */
+.utility-button {
+    text-align: right;
+    margin-top: 0.5rem;
+}
+
+.utility-button a {
+    background-color: transparent !important;
+    border: 2px solid var(--border-color) !important;
+    color: var(--text-secondary) !important;
+    font-weight: 400 !important;
+    padding: 0.4rem 0.8rem !important;
+    font-size: 0.9rem !important;
+}
+
+.utility-button a:hover {
+    background-color: rgba(245, 245, 245, 0.05) !important;
+    border-color: var(--primary-accent) !important;
+    color: var(--primary-accent) !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.work-history-item {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.work-history-item:last-child {
+    border-bottom: none;
+}
+
+.achievements-section {
+    padding: 1rem 0;
+}
+
+.achievement-item {
+    background-color: rgba(233, 30, 99, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 3px solid var(--primary-accent);
+    margin-bottom: 1rem;
+    transition: all 0.2s ease;
+}
+
+.achievement-item:hover {
+    background-color: rgba(233, 30, 99, 0.1);
+    transform: translateX(5px);
+}
+
+.skills-section {
+    margin-bottom: 2rem;
+}
+
+.certifications-section {
+    margin-bottom: 2rem;
+}
+
+.education-section {
+    margin-bottom: 2rem;
+}
+
+/* Executive Summary styling with better readability */
+.executive-summary {
+    background-color: rgba(233, 30, 99, 0.03);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-accent);
+    margin: 1rem 0;
+    font-size: 1.1rem !important;
+    line-height: 1.7 !important;
+    color: var(--text-primary) !important;
+}
+
+.executive-summary strong {
+    background-color: rgba(233, 30, 99, 0.1);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+}
+
+/* Print styles */
+@media print {
+    .hero-container {
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    .sidebar-header,
+    [data-testid="stSidebar"] {
+        display: none !important;
+    }
+
+    .achievement-item {
+        background: none;
+        border-left: 2px solid #333;
+    }
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .main .block-container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    .hero-container {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-links a {
+        margin-right: 0.5rem;
+        margin-bottom: 0.75rem;
+        min-width: 70px;
+        font-size: 0.9rem;
+    }
+
+    .company-header {
+        padding: 1rem;
+    }
+
+    .work-history-item {
+        margin-bottom: 2rem;
+    }
+
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    .header-content {
+        text-align: center;
+    }
+
+    .job-titles {
+        font-size: 1.1rem !important;
+        text-align: center;
+    }
+
+    .contact-details {
+        font-size: 1rem !important;
+        text-align: center;
+    }
+
+    .connect-header {
+        font-size: 1.2rem !important;
+    }
+
+    .utility-button {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .primary-contact {
+        margin-bottom: 0.5rem;
+    }
+}
