@@ -1,0 +1,19 @@
+[project]
+name = "resume-streamlit"
+version = "0.1.0"
+description = "This is kunal Jha resume"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pillow>=11.3.0",
+    "streamlit>=1.50.0",
+]
+
+[dependency-groups]
+dev = [
+    "bandit>=1.8.6",
+    "black>=25.9.0",
+    "flake8>=7.3.0",
+    "isort>=6.0.1",
+    "mypy>=1.18.2",
+]
