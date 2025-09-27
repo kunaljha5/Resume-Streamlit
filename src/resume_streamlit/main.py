@@ -4,7 +4,8 @@ from pathlib import Path
 
 import streamlit as st
 from PIL import Image
-from resources import config as cfg
+
+from .resources import config as cfg
 
 sys.path.append(str(Path(__file__).parent))
 

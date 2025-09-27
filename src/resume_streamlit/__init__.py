@@ -5,6 +5,6 @@ __version__ = "0.1.0"
 __author__ = "Kunal Jha"
 __email__ = "kunaljha5@gmail.com"
 
-from main import main
+from .main import main
 
 __all__ = ["main"]
