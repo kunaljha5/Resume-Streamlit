@@ -1,0 +1,12 @@
+resources:
+  - ../../base
+  - ingress.yaml
+
+patchesStrategicMerge:
+  - patch-deployment.yaml
+  - secrets.yaml
+
+commonLabels:
+  env: prod
+
+namespace: employee-service

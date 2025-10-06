@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resume-streamlit
+  namespace: staging
+  labels:
+    app: resume-streamlit
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: resume-streamlit
+  template:
+    metadata:
+      labels:
+        app: resume-streamlit
+    spec:
+      containers:
+      - name: resume-streamlit
+        image: kunaljha5/resume-streamlit:main
+        ports:
+        - containerPort: 8501

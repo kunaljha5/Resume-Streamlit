@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: resume-streamlit
+spec:
+  selector:
+    app: resume-streamlit
+  type: NodePort
+  ports:
+    - name: http
+      port: 8501
+      targetPort: 8501
+      nodePort: 30080   # You can choose any open port in 30000–32767 range
