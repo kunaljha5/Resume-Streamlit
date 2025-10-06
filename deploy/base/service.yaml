@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: resume-streamlit
+  namespace: staging
 spec:
   selector:
     app: resume-streamlit
