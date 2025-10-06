@@ -6,3 +6,5 @@ metadata:
   labels:
     environment: staging
     istio-injection: disabled
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
