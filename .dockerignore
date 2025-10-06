@@ -1,0 +1,38 @@
+# Python virtual environment
+.venv
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Dependency and build cache
+*.log
+*.egg-info
+*.egg
+*.tar.gz
+*.whl
+build/
+dist/
+
+# Dev tooling and IDEs
+.mypy_cache
+.ruff_cache
+.pre-commit-config.yaml
+.idea
+.vscode
+.git
+.gitignore
+LICENSE
+#README.md
+
+# Deployment or CI/CD-related files (not needed in image)
+deploy/
+tests/
+docs/
+examples/
+
+# Environment / system files
+.DS_Store
+.env
+.env.*
